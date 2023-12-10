@@ -1,0 +1,3 @@
+import { config } from 'dotenv';
+config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` });
+export const { PORT,NODE_ENV,LOG_DIR,DB_HOST,DB_USERNAME,DB_PASSWORD,DB_NAME,DB_PORT,MONGO_URL,DB_NOSL_HOST,DB_NOSQL_PORT,DB_NOSQL_DATABASE,ANGEL_ONE_2FA_KEY,ANGEL_ONE_PIN,ANGEL_ONE_CLIENT_ID,ANGEL_ONE_API_SECRET,ANGEL_ONE_API_KEY } = process.env;

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": false,
+        "amount": 30
+    },
+    "auditLog": "C:\\Users\\Manan\\Desktop\\coinage-backend\\src\\utils\\error\\.8a691bb6fcbfba1731ae8eb28b5ca149f6010a74-audit.json",
+    "files": [
+        {
+            "date": 1702139297684,
+            "name": "C:\\Users\\Manan\\Desktop\\coinage-backend\\src\\utils\\error\\2023-12-09.log",
+            "hash": "bcf0d59a7c1c11db19a80933ce3a4517a5c39240848938bc993403c558340c35"
+        }
+    ],
+    "hashType": "sha256"
+}
