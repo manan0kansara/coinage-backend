@@ -20,10 +20,6 @@ class App {
         this.port = PORT || 3000;
 
         this.connectToDatabase();
-        const angel = new AngelOneBoot();
-        angel.ScriptMaster()
-        const websocket = new Websocket();
-        websocket.connect();
     }
 
     
@@ -43,6 +39,8 @@ class App {
 
     private connectToDatabase() {
         DB.sequelize.sync({force:false}).then((data) =>{
+            const angel = new AngelOneBoot();
+            angel.ScriptMaster()
             logger.info("Postgres connected Sucessfully ❤️")
         });
 

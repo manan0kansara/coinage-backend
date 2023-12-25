@@ -1,7 +1,8 @@
-import {ScriptMaster} from '@/interface/scriptMaster.model';
 import { Sequelize, DataTypes, Model, Optional } from 'sequelize';
-export type OPTIRCScriptCreationAttributes = Optional<ScriptMaster, 'exch_seg' | 'expiry' | 'id' | 'instrumenttype' | 'lotsize' | 'strike' | 'symbol' | 'tick_size' | 'token'>;
-export class OPTIRCscriptModel extends Model<ScriptMaster,OPTIRCScriptCreationAttributes> implements ScriptMaster {
+import {ScriptMaster} from '@/interface/scriptMaster.model';
+
+export type AngelScriptMasterCreationAttributes = Optional<ScriptMaster, 'exch_seg' | 'expiry' | 'id' | 'instrumenttype' | 'lotsize' | 'strike' | 'symbol' | 'tick_size' | 'token'>;
+export class AngelOnescriptModel extends Model<ScriptMaster,AngelScriptMasterCreationAttributes> implements ScriptMaster {
     public id:string;
     public token:string;
     public symbol: string;
@@ -15,8 +16,8 @@ export class OPTIRCscriptModel extends Model<ScriptMaster,OPTIRCScriptCreationAt
     public readonly updatedAt!: Date;
 }
 
-export default function (sequelize:Sequelize): typeof OPTIRCscriptModel {
-    OPTIRCscriptModel.init({
+export default function (sequelize:Sequelize): typeof AngelOnescriptModel {
+    AngelOnescriptModel.init({
         id:{
             type: DataTypes.UUID,
             defaultValue: DataTypes.UUIDV4,
@@ -57,8 +58,8 @@ export default function (sequelize:Sequelize): typeof OPTIRCscriptModel {
         },
 
     },{
-        tableName: 'OPTIRC',
+        tableName: 'AngelOne',
         sequelize
     });
-    return OPTIRCscriptModel;
+    return AngelOnescriptModel;
 }
